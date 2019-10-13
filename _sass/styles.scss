@@ -1,1 +1,116 @@
-// Your website's CSS
+@font-face {
+	font-family: Apercu;
+	font-style: italic;
+	font-weight: 200;
+	src: url(https://static.figma.com/blog/fonts/Apercu-LightItalic.eot#iefix) format("embedded-opentype"), url(https://static.figma.com/blog/fonts/Apercu-LightItalic.woff2) format("woff2"), url(https://static.figma.com/blog/fonts/Apercu-LightItalic.ttf) format("truetype")
+}
+
+@font-face {
+	font-family: Apercu;
+	font-style: normal;
+	font-weight: 200;
+	src: url(https://static.figma.com/blog/fonts/Apercu-Light.eot#iefix) format("embedded-opentype"), url(https://static.figma.com/blog/fonts/Apercu-Light.woff2) format("woff2"), url(https://static.figma.com/blog/fonts/Apercu-Light.ttf) format("truetype")
+}
+
+@font-face {
+	font-family: Apercu;
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://static.figma.com/blog/fonts/Apercu-Regular.eot#iefix) format("embedded-opentype"), url(https://static.figma.com/blog/fonts/Apercu-Regular.woff2) format("woff2"), url(https://static.figma.com/blog/fonts/Apercu-Regular.ttf) format("truetype")
+}
+
+@font-face {
+	font-family: Apercu;
+	font-style: italic;
+	font-weight: 400;
+	src: url(https://static.figma.com/blog/fonts/Apercu-RegularItalic.eot#iefix) format("embedded-opentype"), url(https://static.figma.com/blog/fonts/Apercu-RegularItalic.woff2) format("woff2"), url(https://static.figma.com/blog/fonts/Apercu-RegularItalic.ttf) format("truetype")
+}
+
+@font-face {
+	font-family: Apercu;
+	font-style: normal;
+	font-weight: 500;
+	src: url(https://static.figma.com/blog/fonts/Apercu-Medium.eot#iefix) format("embedded-opentype"), url(https://static.figma.com/blog/fonts/Apercu-Medium.woff2) format("woff2"), url(https://static.figma.com/blog/fonts/Apercu-Medium.ttf) format("truetype")
+}
+
+@font-face {
+	font-family: Apercu;
+	font-style: italic;
+	font-weight: 500;
+	src: url(https://static.figma.com/blog/fonts/Apercu-MediumItalic.eot#iefix) format("embedded-opentype"), url(https://static.figma.com/blog/fonts/Apercu-MediumItalic.woff2) format("woff2"), url(https://static.figma.com/blog/fonts/Apercu-MediumItalic.ttf) format("truetype")
+}
+
+@font-face {
+	font-family: Apercu-Mono;
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://static.figma.com/blog/fonts/Apercu-Mono.eot#iefix) format("embedded-opentype"), url(https://static.figma.com/blog/fonts/Apercu-Mono.woff2) format("woff2"), url(https://static.figma.com/blog/fonts/Apercu-Mono.ttf) format("truetype")
+}
+* {
+	z-index: 10;
+}
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	background: #111;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://source.unsplash.com/random");
+	background-size: cover;
+	color: #ffffff;
+
+	.title {
+		font-family: "Roboto Mono";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 144px;
+	}
+
+	.subtitle {
+		font-family: "Apercu";
+		font-size: 48px;
+		line-height: 58px;
+		display: flex;
+		align-items: center;
+		text-align: right;
+	}
+
+	.container {
+		position: absolute;
+		top: 75px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: rotateZ(45deg);
+		z-index: 0;
+	}
+
+	.rec1 {
+		background: #F24E1E;
+		width: 100px;
+		height: 75vw;
+	}
+
+	.rec2 {
+		background: #A259FF;
+		width: 100px;
+		height: 75vw;
+		transform: translateY(-50px);
+	}
+
+	.rec3 {
+		background: #1ABCFE;
+		width: 100px;
+		height: 75vw;
+		transform: translateY(-100px);
+	}
+
+	.rec4 {
+		background: #0ACF83;
+		width: 100px;
+		height: 75vw;
+		transform: translateY(-150px);
+	}
+}

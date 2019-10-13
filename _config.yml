@@ -2,3 +2,6 @@ markdown: kramdown
 highlighter: rouge
 
 permalink: pretty
+
+title: Title
+description: Description
