@@ -107,9 +107,14 @@ textarea {
 
 @import "styles.scss";
 
+// images
 
-
-
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{site.hero-image}}");
+}
+.logo {
+    background-image: url("{{site.logo}}");
+}
 
 
 

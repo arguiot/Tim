@@ -46,9 +46,11 @@
 	font-weight: 400;
 	src: url(https://static.figma.com/blog/fonts/Apercu-Mono.eot#iefix) format("embedded-opentype"), url(https://static.figma.com/blog/fonts/Apercu-Mono.woff2) format("woff2"), url(https://static.figma.com/blog/fonts/Apercu-Mono.ttf) format("truetype")
 }
+
 * {
 	z-index: 10;
 }
+
 header {
 	display: flex;
 	justify-content: center;
@@ -57,8 +59,8 @@ header {
 	width: 100vw;
 	height: 100vh;
 	background: #111;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://source.unsplash.com/random");
 	background-size: cover;
+	background-attachment: fixed;
 	color: #ffffff;
 
 	.title {
@@ -79,38 +81,97 @@ header {
 
 	.container {
 		position: absolute;
-		top: 75px;
+		top: 0px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transform: rotateZ(45deg);
 		z-index: 0;
+	}
+
+	.rec {
+		width: 100px;
+		height: 75vw;
+		min-height: 130vh;
+		transform: rotateZ(45deg);
 	}
 
 	.rec1 {
 		background: #F24E1E;
-		width: 100px;
-		height: 75vw;
+
 	}
 
 	.rec2 {
 		background: #A259FF;
-		width: 100px;
-		height: 75vw;
-		transform: translateY(-50px);
 	}
 
 	.rec3 {
 		background: #1ABCFE;
-		width: 100px;
-		height: 75vw;
-		transform: translateY(-100px);
+
 	}
 
 	.rec4 {
 		background: #0ACF83;
-		width: 100px;
-		height: 75vw;
-		transform: translateY(-150px);
+	}
+
+	.menu {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 50px;
+		// width: 100vw;
+		// max-width: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		mix-blend-mode: exclusion;
+
+		.item {
+			margin: 50px;
+			color: white;
+			font-family: "Apercu";
+			font-size: 24px;
+			text-decoration: none;
+
+			.triangle {
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+
+				border-top: 17.32px solid #fff;
+			}
+		}
+	}
+
+	.logo {
+		position: fixed;
+		width: 65px;
+		height: 65px;
+		left: 30px;
+		top: 25px;
+		background-size: contain;
+	}
+}
+
+.content {
+	padding-top: 100px;
+	padding: 10px;
+	position: absolute;
+	top: 100vh;
+	width: 100vw;
+	height: auto;
+	background: #fff;
+	.articles {
+		background: white;
+		max-width: 800px;
+		width: 100vw;
+		margin: 0 auto;
+	
+		h1 {
+			font-family: "Apercu";
+			font-size: 36px;
+		}
 	}
 }
