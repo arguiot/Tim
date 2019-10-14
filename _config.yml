@@ -2,6 +2,7 @@ markdown: kramdown
 highlighter: rouge
 
 permalink: pretty
+url: https://steve.arguiot.com
 
 title: Title
 description: Description
