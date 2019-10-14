@@ -1,5 +1,6 @@
 const P = new ProType()
 
+// View Controllers
 class Landing extends P.ViewController {
     preload() {
         this.state = {
@@ -8,6 +9,10 @@ class Landing extends P.ViewController {
     }
     willShow() {
         this.menu()
+        this.mountGroups(
+            this.view.querySelectorAll(".article"), // All groups element
+            Article // The Group class
+        )
     }
     menu() {
         this.menuColor()
@@ -51,6 +56,17 @@ class Landing extends P.ViewController {
                 menu.style.display = "none"
                 document.querySelector(".expand > .triangle").style.transform = "rotate(0deg)"
             }
+        })
+    }
+}
+
+
+// Groups
+class Article extends P.Group {
+    init() {
+        this.group.addEventListener("click", e => {
+            const url = this.group.getAttribute("link")
+            window.location = url
         })
     }
 }
