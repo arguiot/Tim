@@ -46,8 +46,10 @@ class Landing extends P.ViewController {
             const menu = this.view.querySelector(".expandable")
             if (this.state.expand === true) {
                 menu.style.display = "block"
+                document.querySelector(".expand > .triangle").style.transform = "rotate(180deg)"
             } else {
                 menu.style.display = "none"
+                document.querySelector(".expand > .triangle").style.transform = "rotate(0deg)"
             }
         })
     }
