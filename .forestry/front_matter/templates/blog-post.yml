@@ -1,4 +1,40 @@
 ---
 label: Blog post
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: The title of the article
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: The description of the article
+- name: author
+  type: text
+  config:
+    required: false
+  label: Author
+- name: date
+  type: datetime
+  label: Date
+  description: When was the post released?
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
+  description: The image of the article
