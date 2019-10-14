@@ -38,3 +38,5 @@ fields:
     maxSize: 250
   label: Image
   description: The image of the article
+pages:
+- _posts/tesla-roadster-a-small-revolution.md
