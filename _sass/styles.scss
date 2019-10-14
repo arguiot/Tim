@@ -126,6 +126,7 @@ header {
 		padding: 20px;
 		// mix-blend-mode: exclusion;
 		z-index: 100;
+
 		.item {
 			display: inline;
 			margin: 50px;
@@ -135,7 +136,7 @@ header {
 			text-decoration: none;
 			transition: all 500ms ease-in-out;
 			cursor: pointer;
-			
+
 			.triangle {
 				transition: all 500ms ease-in-out;
 				display: inline-block;
@@ -159,6 +160,7 @@ header {
 			border: 3px white solid;
 			padding-top: 20px;
 			padding-bottom: 20px;
+
 			li {
 				font-family: "Roboto Mono";
 				font-style: normal;
@@ -166,6 +168,7 @@ header {
 				font-size: 18px;
 				line-height: 25px;
 			}
+
 			.triangle {
 				display: inline-block;
 				width: 0;
@@ -204,13 +207,105 @@ header {
 
 	.articles {
 		background: white;
-		max-width: 800px;
+		max-width: 1080px;
 		width: 100vw;
 		margin: 0 auto;
 
 		h1 {
 			font-family: "Apercu";
 			font-size: 36px;
+		}
+
+		.list {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			.row {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: row;
+				flex-wrap: wrap;
+
+				.small {
+					max-width: 90vw;
+					width: 400px;
+					height: 314px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					background: #111;
+					border: 5px solid #111;
+					margin: 5px;
+					transition: all 250ms ease-in-out;
+					cursor: pointer;
+					&:hover {
+						transform: scale(1.1);
+						z-index: 11;
+					}
+
+					img {
+						width: 100%;
+						height: 250px;
+						object-fit: cover;
+					}
+
+					p {
+						height: 64px;
+						font-family: "Roboto Mono";
+						font-style: normal;
+						font-weight: normal;
+						font-size: 18px;
+						line-height: 21px;
+						color: white;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
+						text-align: center;
+					}
+				}
+
+				.large {
+					width: 600px;
+					max-width: 90vw;
+					height: 314px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: row-reverse;
+					background: #111;
+					border: 5px solid #111;
+					margin: 5px;
+					transition: all 250ms ease-in-out;
+					cursor: pointer;
+					&:hover {
+						transform: scale(1.1);
+						z-index: 11;
+					}
+
+					img {
+						width: 314px;
+						height: 314px;
+						object-fit: cover;
+					}
+
+					p {
+						font-family: "Roboto Mono";
+						font-style: normal;
+						font-weight: bold;
+						font-size: 36px;
+						line-height: 42px;
+						text-transform: uppercase;
+						color: white;
+						text-overflow: ellipsis;
+						word-wrap: break-word;
+						text-align: center;
+					}
+				}
+			}
 		}
 	}
 }
