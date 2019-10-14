@@ -50,6 +50,21 @@
 * {
 	z-index: 10;
 }
+:root {
+	color-scheme: light dark;
+	--text-color: #111;
+	--footer: #fafafa;
+	--white: white;
+	--opposite: #111;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text-color: #fff;
+		--footer: #000;
+		--white: #1e1e1e;
+		--opposite: #fff;
+	}
+}
 
 .menu {
 	position: fixed;
@@ -68,7 +83,7 @@
 	.item {
 		display: inline;
 		margin: 50px;
-		color: white;
+		color: var(--opposite);
 		font-family: "Apercu";
 		font-size: 24px;
 		text-decoration: none;
@@ -94,8 +109,8 @@
 		top: 75px;
 		right: 40px;
 		width: 120px;
-		background: #111;
-		border: 3px white solid;
+		background: var(--text-color);
+		border: 3px var(--white) solid;
 		padding-top: 20px;
 		padding-bottom: 20px;
 
@@ -114,7 +129,7 @@
 			border-left: 10px solid transparent;
 			border-right: 10px solid transparent;
 
-			border-top: 17.32px solid #fff;
+			border-top: 17.32px solid var(--white);
 			transform: rotate(180deg);
 			position: fixed;
 			top: 75px;
@@ -140,10 +155,10 @@ header {
 	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
-	background: #111;
+	background: var(--text-color);
 	background-size: cover;
 	background-attachment: fixed;
-	color: #ffffff;
+	color: #fff;
 	position: relative;
 
 	.title {
@@ -201,13 +216,12 @@ header {
 	padding-top: 100px;
 	padding: 10px;
 	width: 100vw;
-	height: 100vh;
-	background: #fff;
+	background: var(--white);
 	position: relative;
 	border-bottom: 1px solid #eee;
 
 	.articles {
-		background: white;
+		background: var(--white);
 		max-width: 1080px;
 		width: 100vw;
 		margin: 0 auto;
@@ -242,8 +256,8 @@ header {
 					justify-content: center;
 					align-items: center;
 					flex-direction: column;
-					background: #111;
-					border: 5px solid #111;
+					background: var(--text-color);
+					border: 5px solid var(--text-color);
 					margin: 5px;
 					transition: all 250ms ease-in-out;
 					cursor: pointer;
@@ -266,7 +280,7 @@ header {
 						font-weight: normal;
 						font-size: 18px;
 						line-height: 21px;
-						color: white;
+						color: var(--white);
 						text-overflow: ellipsis;
 						white-space: nowrap;
 						overflow: hidden;
@@ -287,7 +301,7 @@ header {
 							font-size: 36px;
 							line-height: 42px;
 							text-transform: uppercase;
-							color: white;
+							color: var(--white);
 							text-overflow: ellipsis;
 							word-wrap: break-word;
 							text-align: center;
@@ -305,13 +319,14 @@ footer {
 	z-index: 0;
 	width: 100vw;
 	height: 300px;
-	background: #fafafa;
+	background: var(--footer);
 	font-family: "Apercu";
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: var(--text-color)
 }
 
 body {
-	padding-bottom: 300px;
+	margin-bottom: 300px;
 }

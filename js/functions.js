@@ -22,14 +22,14 @@ class Landing extends P.ViewController {
         const menu = this.view.querySelector(".menu")
         window.onscroll = () => {
             if (window.scrollY > window.innerHeight - 30) {
-                menu.querySelectorAll(".item").forEach(el => el.style.color = "#111")
-                menu.querySelector(".triangle").style["border-top"] = "17.32px solid #111"
+                menu.querySelectorAll(".item").forEach(el => el.style.color = "var(--opposite)")
+                menu.querySelector(".triangle").style["border-top"] = "17.32px solid var(--opposite)"
 
                 const expandable = menu.querySelector(".expandable")
-                expandable.style["border-color"] = "#111"
-                expandable.style["background"] = "#fff"
-                expandable.style["color"] = "#111"
-                expandable.querySelector(".triangle").style["border-top"] = "17.32px solid #111"
+                expandable.style["border-color"] = "var(--opposite)"
+                expandable.style["background"] = "var(--white)"
+                expandable.style["color"] = "var(--opposite)"
+                expandable.querySelector(".triangle").style["border-top"] = "17.32px solid var(--opposite)"
             } else {
                 menu.querySelectorAll(".item").forEach(el => el.style.color = "#fff")
                 menu.querySelector(".triangle").style["border-top"] = "17.32px solid #fff"
