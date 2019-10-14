@@ -231,6 +231,9 @@ header {
 				flex-direction: row;
 				flex-wrap: wrap;
 
+				&:nth-child(even) {
+					flex-direction: row-reverse;
+				}
 				.article {
 					max-width: 90vw;
 					width: 400px;
@@ -270,7 +273,7 @@ header {
 						text-align: center;
 					}
 
-					&:nth-child(2n) {
+					&:nth-child(even) {
 						width: 600px;
 						max-width: 90vw;
 						flex-direction: row-reverse;
