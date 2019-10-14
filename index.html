@@ -3,21 +3,21 @@ layout: html
 title: Steve
 description: Description
 ---
-
-<header>
-	<div class="logo"></div>
-	<div class="menu">
-		<a href="" class="item">About</a>
-		<a href="" class="item">Page1</a>
-		<div class="item expand">Menu <div class="triangle"></div></div>
-		<ul class="expandable">
-			<div class="triangle"></div>
-			<li>Page</li>
-			<li>Page</li>
-			<li>Page</li>
-			<li>Page</li>
-		</ul>
+<div class="logo"></div>
+<div class="menu">
+	<a href="" class="item">About</a>
+	<a href="" class="item">Page1</a>
+	<div class="item expand">Menu <div class="triangle"></div>
 	</div>
+	<ul class="expandable">
+		<div class="triangle"></div>
+		<li>Page</li>
+		<li>Page</li>
+		<li>Page</li>
+		<li>Page</li>
+	</ul>
+</div>
+<header>
 	<div class="title">{{site.title}}</div>
 	<div class="subtitle">{{site.description}}</div>
 	<div class="container">
@@ -28,31 +28,19 @@ description: Description
 	</div>
 </header>
 <div class="content">
-		<div class="articles">
-			<h1>Articles</h1>
-			<div class="list">
+	<div class="articles">
+		<h1>Articles</h1>
+		<div class="list">
+			{% for post in site.posts %}
 				<div class="row">
-					<div class="small article" link="./article1">
-						<img src="{{site.hero-image}}" alt="Article">
-						<p>Tesla Roadster: a small revolution?</p>
-					</div>
-					<div class="large article" link="./article2">
-						<img src="{{site.hero-image}}" alt="Article">
-						<p>Tesla Roadster: a small revolution?</p>
+					<div class="article" link="{{post.url}}">
+						<img src="{{post.image}}" alt="{{post.description}}">
+						<p>{{post.title}}</p>
 					</div>
 				</div>
-				<div class="row">
-						<div class="large article" link="./article3">
-								<img src="{{site.hero-image}}" alt="Article">
-								<p>Tesla Roadster: a small revolution?</p>
-							</div>
-						<div class="small article" link="./article4">
-							<img src="{{site.hero-image}}" alt="Article">
-							<p>Tesla Roadster: a small revolution?</p>
-						</div>
-					</div>
-			</div>
+			{% endfor %}
 		</div>
+	</div>
 </div>
 <footer>
 	Copyright © 2019 Arthur Guiot. All rights reserved.

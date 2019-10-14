@@ -51,6 +51,88 @@
 	z-index: 10;
 }
 
+.menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 50px;
+	// width: 100vw;
+	// max-width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	// mix-blend-mode: exclusion;
+	z-index: 100;
+
+	.item {
+		display: inline;
+		margin: 50px;
+		color: white;
+		font-family: "Apercu";
+		font-size: 24px;
+		text-decoration: none;
+		transition: all 500ms ease-in-out;
+		cursor: pointer;
+
+		.triangle {
+			transition: all 500ms ease-in-out;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+
+			border-top: 17.32px solid #fff;
+		}
+	}
+
+	.expandable {
+		display: none;
+		transition: all 500ms ease-in-out;
+		position: fixed;
+		top: 75px;
+		right: 40px;
+		width: 120px;
+		background: #111;
+		border: 3px white solid;
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		li {
+			font-family: "Roboto Mono";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 25px;
+		}
+
+		.triangle {
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+
+			border-top: 17.32px solid #fff;
+			transform: rotate(180deg);
+			position: fixed;
+			top: 75px;
+			right: 70px;
+		}
+	}
+}
+
+.logo {
+	position: fixed;
+	width: 65px;
+	height: 65px;
+	left: 30px;
+	top: 25px;
+	background-size: contain;
+	z-index: 100;
+}
+
 header {
 	display: flex;
 	justify-content: center;
@@ -63,6 +145,7 @@ header {
 	background-attachment: fixed;
 	color: #ffffff;
 	position: relative;
+
 	.title {
 		font-family: "Roboto Mono";
 		font-style: normal;
@@ -112,88 +195,6 @@ header {
 	.rec4 {
 		background: #0ACF83;
 	}
-
-	.menu {
-		position: fixed;
-		top: 0;
-		right: 0;
-		height: 50px;
-		// width: 100vw;
-		// max-width: 300px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-		// mix-blend-mode: exclusion;
-		z-index: 100;
-
-		.item {
-			display: inline;
-			margin: 50px;
-			color: white;
-			font-family: "Apercu";
-			font-size: 24px;
-			text-decoration: none;
-			transition: all 500ms ease-in-out;
-			cursor: pointer;
-
-			.triangle {
-				transition: all 500ms ease-in-out;
-				display: inline-block;
-				width: 0;
-				height: 0;
-				border-left: 10px solid transparent;
-				border-right: 10px solid transparent;
-
-				border-top: 17.32px solid #fff;
-			}
-		}
-
-		.expandable {
-			display: none;
-			transition: all 500ms ease-in-out;
-			position: fixed;
-			top: 75px;
-			right: 40px;
-			width: 120px;
-			background: #111;
-			border: 3px white solid;
-			padding-top: 20px;
-			padding-bottom: 20px;
-
-			li {
-				font-family: "Roboto Mono";
-				font-style: normal;
-				font-weight: normal;
-				font-size: 18px;
-				line-height: 25px;
-			}
-
-			.triangle {
-				display: inline-block;
-				width: 0;
-				height: 0;
-				border-left: 10px solid transparent;
-				border-right: 10px solid transparent;
-
-				border-top: 17.32px solid #fff;
-				transform: rotate(180deg);
-				position: fixed;
-				top: 75px;
-				right: 70px;
-			}
-		}
-	}
-
-	.logo {
-		position: fixed;
-		width: 65px;
-		height: 65px;
-		left: 30px;
-		top: 25px;
-		background-size: contain;
-		z-index: 100;
-	}
 }
 
 .content {
@@ -204,12 +205,14 @@ header {
 	background: #fff;
 	position: relative;
 	border-bottom: 1px solid #eee;
+
 	.articles {
 		background: white;
 		max-width: 1080px;
 		width: 100vw;
 		margin: 0 auto;
 		z-index: 11;
+
 		h1 {
 			font-family: "Apercu";
 			font-size: 36px;
@@ -228,7 +231,7 @@ header {
 				flex-direction: row;
 				flex-wrap: wrap;
 
-				.small {
+				.article {
 					max-width: 90vw;
 					width: 400px;
 					height: 314px;
@@ -241,6 +244,7 @@ header {
 					margin: 5px;
 					transition: all 250ms ease-in-out;
 					cursor: pointer;
+
 					&:hover {
 						transform: scale(1.1);
 						z-index: 11;
@@ -265,49 +269,33 @@ header {
 						overflow: hidden;
 						text-align: center;
 					}
-				}
 
-				.large {
-					width: 600px;
-					max-width: 90vw;
-					height: 314px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					flex-direction: row-reverse;
-					background: #111;
-					border: 5px solid #111;
-					margin: 5px;
-					transition: all 250ms ease-in-out;
-					cursor: pointer;
-					&:hover {
-						transform: scale(1.1);
-						z-index: 11;
-					}
+					&:nth-child(2n) {
+						width: 600px;
+						max-width: 90vw;
+						flex-direction: row-reverse;
+						img {
+							width: 314px;
+							height: 314px;
+						}
 
-					img {
-						width: 314px;
-						height: 314px;
-						object-fit: cover;
-					}
-
-					p {
-						font-family: "Roboto Mono";
-						font-style: normal;
-						font-weight: bold;
-						font-size: 36px;
-						line-height: 42px;
-						text-transform: uppercase;
-						color: white;
-						text-overflow: ellipsis;
-						word-wrap: break-word;
-						text-align: center;
+						p {
+							font-weight: bold;
+							font-size: 36px;
+							line-height: 42px;
+							text-transform: uppercase;
+							color: white;
+							text-overflow: ellipsis;
+							word-wrap: break-word;
+							text-align: center;
+						}
 					}
 				}
 			}
 		}
 	}
 }
+
 footer {
 	position: fixed;
 	bottom: 0;
@@ -320,6 +308,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 }
+
 body {
 	padding-bottom: 300px;
 }
