@@ -2,8 +2,9 @@
 title: A future where satellites are serviced in space is on its way
 description: ''
 author: Loren Grush
-date: 2019-10-14 04:00:00 +0000
+date: 2019-10-14T04:00:00.000+00:00
 image: "/uploads/pgL_SP_60004_001.0.jpg"
+layout: post
 
 ---
 Next year, the long-held dream of repairing satellites already in orbit around Earth will come a little closer to reality. Two new missions — from military contractor Northrop Grumman and a startup called Astroscale — will send spacecraft into orbit to rendezvous with other vehicles zooming around Earth to see if it’s possible for two satellites to delicately meet up with each other in space. If successful, these missions could mark a big first step toward cleaning up Earth orbit and making it a more sustainable place.
