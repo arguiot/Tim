@@ -38,6 +38,13 @@ fields:
     maxSize: 250
   label: Image
   description: The image of the article
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  hidden: true
+  default: post
 pages:
 - about.md
 - _posts/2019-10-14-iphone-11-pro-the-default.md
