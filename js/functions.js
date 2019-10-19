@@ -19,28 +19,52 @@ class Landing extends P.ViewController {
         this.expandable()
     }
     menuColor() {
-        const menu = this.view.querySelector(".menu")
-        window.onscroll = () => {
-            if (window.scrollY > window.innerHeight - 30) {
-                menu.querySelectorAll(".item").forEach(el => el.style.color = "var(--opposite)")
-                menu.querySelector(".triangle").style["border-top"] = "17.32px solid var(--opposite)"
+        this.menu = this.view.querySelector(".menu")
+        this.article = document.querySelector("article")
+        this.sup = typeof this.article !== "undefined" ? window.innerHeight / 2 - 30 : window.innerHeight - 30
+        this.hero = this.view.querySelector(".hero")
 
-                const expandable = menu.querySelector(".expandable")
-                expandable.style["border-color"] = "var(--opposite)"
-                expandable.style["background"] = "var(--white)"
-                expandable.style["color"] = "var(--opposite)"
-                expandable.querySelector(".triangle").style["border-top"] = "17.32px solid var(--opposite)"
+        console.log(this.sup, typeof article)
+        addEventListener("scroll", () => {
+            requestAnimationFrame(this.effectRendering.bind(this))
+        })
+    }
+
+    effectRendering() {
+        if (window.scrollY > this.sup) {
+            this.menu.querySelectorAll(".item").forEach(el => el.style.color = "var(--opposite)")
+            this.menu.querySelector(".triangle").style["border-top"] = "17.32px solid var(--opposite)"
+
+            const expandable = this.menu.querySelector(".expandable")
+            expandable.style["border-color"] = "var(--opposite)"
+            expandable.style["background"] = "var(--white)"
+            expandable.style["color"] = "var(--opposite)"
+            expandable.querySelector(".triangle").style["border-top"] = "17.32px solid var(--opposite)"
+        } else {
+            this.menu.querySelectorAll(".item").forEach(el => el.style.color = "#fff")
+            this.menu.querySelector(".triangle").style["border-top"] = "17.32px solid #fff"
+
+            const expandable = this.menu.querySelector(".expandable")
+            expandable.style["border-color"] = "#fff"
+            expandable.style["background"] = "#111"
+            expandable.style["color"] = "#fff"
+            expandable.querySelector(".triangle").style["border-top"] = "17.32px solid #fff"
+        }
+
+        if (this.article) {
+            const f = window.scrollY / this.sup > 1 ? 1 : window.scrollY / this.sup
+            this.article.style.opacity = f
+            const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1
+            if (!isFirefox) {
+                this.hero.style.filter = `saturate(180%) blur(${20 * f}px)`
+            }
+            if (f >= 1) {
+                this.hero.style.display = "none"
             } else {
-                menu.querySelectorAll(".item").forEach(el => el.style.color = "#fff")
-                menu.querySelector(".triangle").style["border-top"] = "17.32px solid #fff"
-
-                const expandable = menu.querySelector(".expandable")
-                expandable.style["border-color"] = "#fff"
-                expandable.style["background"] = "#111"
-                expandable.style["color"] = "#fff"
-                expandable.querySelector(".triangle").style["border-top"] = "17.32px solid #fff"
+                this.hero.style.display = "block"
             }
         }
+
     }
     expandable() {
         const menu = this.view.querySelector(".expand")

@@ -85,7 +85,7 @@
 	.item {
 		display: inline;
 		margin: 50px;
-		color: var(--opposite);
+		color: #fff;
 		font-family: "Apercu";
 		font-size: 24px;
 		text-decoration: none;
@@ -111,8 +111,8 @@
 		top: 75px;
 		right: 40px;
 		width: 120px;
-		background: var(--text-color);
-		border: 3px var(--white) solid;
+		background: #111;
+		border: 3px #fff solid;
 		padding-top: 20px;
 		padding-bottom: 20px;
 
@@ -131,7 +131,7 @@
 			border-left: 10px solid transparent;
 			border-right: 10px solid transparent;
 
-			border-top: 17.32px solid var(--white);
+			border-top: 17.32px solid #fff;
 			transform: rotate(180deg);
 			position: fixed;
 			top: 75px;
@@ -340,34 +340,47 @@ body {
 
 /* Default styles for everything.*/
 
+.hero {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 48px;
+	line-height: 58px;
+	text-align: center;
+	color: #fff;
+	background-size: cover;
+	background-position: center;
+	filter: saturate(180%);
+	transform: scale(1.1);
+}
+
 article {
 	width: 100vw;
 	font-family: 'Lexend Deca', sans-serif;
-	background: var(--white);
 	color: var(--text-color);
 	position: relative;
-	.hero {
-		width: 100vw;
-		height: 50vh;
-		background-attachment: fixed;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 48px;
-		line-height: 58px;
-		text-align: center;
-		color: #fff;
-		background-size: cover;
-	}
+	background: var(--white);
+	opacity: 0;
+	padding-bottom: 50vh;
+
 	main.container {
+		position: relative;
+		top: 50vh;
 		max-width: 960px;
 		width: calc(100vw - 10px);
 		margin: 0 auto;
 		padding-top: 100px;
 		padding-bottom: 100px;
+
 		p.date {
 			opacity: .5;
 		}
+
 		h1,
 		h2,
 		h3,
