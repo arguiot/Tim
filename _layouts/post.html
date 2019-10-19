@@ -2,10 +2,12 @@
 layout: page
 ---
 
-<p class="date">{{page.date | date: "%Y-%m-%d %T"}}</p>
-
 <article>
+  <div class="hero" style="background-image: url('{{page.image}}');">
+  </div>
     <main class="container">
+        <h1 class="title">{{page.title}}</h1>
+        <p class="date"><lunar-icon icon="clock"></lunar-icon> <time-ago class="date" datetime="{{page.date | date_to_xmlschema}}">{{page.date | date: "%B %d, %Y"}}</time-ago></p>
         {{content}}
     </main>
 </article>
@@ -13,3 +15,4 @@ layout: page
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@github/time-elements@3.0.7/dist/time-elements-legacy.min.js"></script>

@@ -346,12 +346,28 @@ article {
 	background: var(--white);
 	color: var(--text-color);
 	position: relative;
-
+	.hero {
+		width: 100vw;
+		height: 50vh;
+		background-attachment: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 48px;
+		line-height: 58px;
+		text-align: center;
+		color: #fff;
+		background-size: cover;
+	}
 	main.container {
 		max-width: 960px;
 		width: calc(100vw - 10px);
 		margin: 0 auto;
-
+		padding-top: 100px;
+		padding-bottom: 100px;
+		p.date {
+			opacity: .5;
+		}
 		h1,
 		h2,
 		h3,
