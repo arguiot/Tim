@@ -263,11 +263,11 @@ header {
 					background: var(--text-color);
 					border: 5px solid var(--text-color);
 					margin: 5px;
-					transition: all 250ms ease-in-out;
+					transition: all 100ms ease-in-out;
 					cursor: pointer;
 
 					&:hover {
-						transform: scale(1.1);
+						transform: scale(1.05);
 						z-index: 11;
 					}
 
