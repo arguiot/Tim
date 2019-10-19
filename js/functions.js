@@ -24,7 +24,6 @@ class Landing extends P.ViewController {
         this.sup = typeof this.article !== "undefined" ? window.innerHeight / 2 - 30 : window.innerHeight - 30
         this.hero = this.view.querySelector(".hero")
 
-        console.log(this.sup, typeof article)
         addEventListener("scroll", () => {
             requestAnimationFrame(this.effectRendering.bind(this))
         })
