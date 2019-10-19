@@ -21,7 +21,7 @@ class Landing extends P.ViewController {
     menuColor() {
         this.menu = this.view.querySelector(".menu")
         this.article = document.querySelector("article")
-        this.sup = typeof this.article !== "undefined" ? window.innerHeight / 2 - 30 : window.innerHeight - 30
+        this.sup = typeof this.article !== "undefined" && this.article !== null ? window.innerHeight / 2 - 30 : window.innerHeight - 30
         this.hero = this.view.querySelector(".hero")
 
         addEventListener("scroll", () => {
