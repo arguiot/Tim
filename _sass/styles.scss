@@ -344,8 +344,10 @@ header {
 						text-transform: uppercase;
 						color: var(--white);
 						text-overflow: ellipsis;
-						word-wrap: break-word;
+						word-wrap: break-all;
 						text-align: center;
+						white-space: pre-wrap;
+						height: auto;
 					}
 				}
 			}
