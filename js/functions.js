@@ -13,6 +13,8 @@ class Landing extends P.ViewController {
             this.view.querySelectorAll(".article"), // All groups element
             Article // The Group class
         )
+
+        this.setupSearch()
     }
     menu() {
         this.menuColor()
@@ -80,6 +82,32 @@ class Landing extends P.ViewController {
                 document.querySelector(".expand > .triangle").style.transform = "rotate(0deg)"
             }
         })
+    }
+
+    /// MARK: Search
+    setupSearch() {
+        this.loadScript("https://cdn.jsdelivr.net/npm/orionsearch@0.1.1/dist/front-end.bundle.js", () => {
+            console.log("script loaded!", OrionSearch)
+        })
+    }
+    loadScript(url, callback) {
+        const script = document.createElement("script")
+        script.type = "text/javascript";
+        if (script.readyState) { // only required for IE <9
+            script.onreadystatechange = function () {
+                if (script.readyState === "loaded" || script.readyState === "complete") {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else { //Others
+            script.onload = function () {
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
     }
 }
 
