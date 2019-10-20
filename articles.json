@@ -1,7 +1,15 @@
 ---
 ---
 [
-    {% for post in site.posts %}
+    {% assign length = site.posts | size | minus: 1%}
+    {% for post in site.posts limit: length %}
+    {
+        "name": "{{post.title}}",
+        "image": "{{post.image}}",
+        "url": "{{post.url}}"
+    },
+    {% endfor %}
+    {% for post in site.posts offset: length %}
     {
         "name": "{{post.title}}",
         "image": "{{post.image}}",

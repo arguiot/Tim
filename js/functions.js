@@ -1,3 +1,5 @@
+---
+---
 const P = new ProType()
 
 // View Controllers
@@ -87,7 +89,22 @@ class Landing extends P.ViewController {
     /// MARK: Search
     setupSearch() {
         this.loadScript("https://cdn.jsdelivr.net/npm/orionsearch@0.1.1/dist/front-end.bundle.js", () => {
-            console.log("script loaded!", OrionSearch)
+            const {
+                OSDatabase,
+                OSRecord,
+                OSQuery,
+            } = OrionSearch
+
+            const db = new OSDatabase()
+
+            fetch("articles.json").then(data => {
+                return data.json()
+            }).then(data => {
+                db._data = data.map(x => new OSRecord(x))
+                console.log(db._data)
+                db.configure("name")
+                this.os = new OrionSearch.OrionSearch(db)
+            })
         })
     }
     loadScript(url, callback) {
