@@ -104,8 +104,55 @@ class Landing extends P.ViewController {
                 console.log(db._data)
                 db.configure("name")
                 this.os = new OrionSearch.OrionSearch(db)
+
+                this.view.querySelector("input#search").addEventListener("input", this.search.bind(this))
             })
         })
+    }
+    search() {
+        const {
+            OSDatabase,
+            OSRecord,
+            OSQuery,
+        } = OrionSearch
+
+        const v = this.view.querySelector("input#search").value
+        const query = new OSQuery(v)
+        const list = this.view.querySelector(".list")
+        list.innerHTML = ""
+        let l = []
+        this.os.perform(query, this.os.OSSearchType.normal, record => {
+            l.push(record.data)
+        })
+        if (v == "") {
+            l = this.os.db._data.slice(0, 20).map(r => r.data)
+        }
+        for (let i = 0; i < l.length / 2; i++) {
+            const post = l[2 * i]
+            const post2 = l[2 * i + 1]
+            let add = ""
+            if (typeof post2 !== "undefined") {
+                add = `
+                <div class="article" link="${post2.url}">
+                    <img src="${post2.image}" alt="${post2.description}">
+                    <p>${post2.name}</p>
+                </div>
+                `
+            }
+            list.innerHTML += `
+                <div class="row">
+                    <div class="article" link="${post.url}">
+                        <img src="${post.image}" alt="${post.description}">
+                        <p>${post.name}</p>
+                    </div>
+                    ${add}
+                </div>
+                `
+        }
+        this.mountGroups(
+            this.view.querySelectorAll(".article"), // All groups element
+            Article // The Group class
+        )
     }
     loadScript(url, callback) {
         const script = document.createElement("script")

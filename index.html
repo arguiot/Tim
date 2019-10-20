@@ -16,22 +16,27 @@ description: Description
 <div class="content">
 	<div class="articles">
 		<h1>Articles</h1>
-		<label class="search" for="search"><lunar-icon icon="search"></lunar-icon><input type="search" id="search" placeholder="Search..."></div>
-		<div class="list">
-			{% assign rows = site.posts.size | divided_by: 2.0 | ceil %}
-			{% for i in (1..rows) %}
-				{% assign offset = forloop.index0 | times: 2 %}
-				<div class="row">
-					{% for post in site.posts limit:2 offset:offset %}
-						<div class="article" link="{{post.url}}">
-							<img src="{{post.image}}" alt="{{post.description}}">
-							<p>{{post.title}}</p>
-						</div>
-					{% endfor %}
-				</div>
+		<label class="search" for="search">
+			<lunar-icon icon="search">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" class="lunar-icons"><circle cx="15" cy="9" r="6"></circle><path d="M3 21l8-8"></path></svg>
+			</lunar-icon>
+			<input type="search" id="search" placeholder="Search...">
+	</div>
+	<div class="list">
+		{% assign rows = site.posts.size | divided_by: 2.0 | ceil %}
+		{% for i in (1..rows) limit: 20 %}
+		{% assign offset = forloop.index0 | times: 2 %}
+		<div class="row">
+			{% for post in site.posts limit:2 offset:offset %}
+			<div class="article" link="{{post.url}}">
+				<img src="{{post.image}}" alt="{{post.description}}">
+				<p>{{post.title}}</p>
+			</div>
 			{% endfor %}
 		</div>
+		{% endfor %}
 	</div>
 </div>
+</div>
 
-<!-- <link rel="preload" href="articles.json" as="fetch" type="text/json"> -->
+<link rel="preload" href="articles.json" as="fetch" type="text/json">
