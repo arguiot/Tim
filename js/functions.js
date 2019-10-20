@@ -88,6 +88,9 @@ class Landing extends P.ViewController {
 
     /// MARK: Search
     setupSearch() {
+        if (typeof this.view.querySelector("input#search") === "undefined" || this.view.querySelector("input#search") === null) {
+            return
+        }
         this.loadScript("https://cdn.jsdelivr.net/npm/orionsearch@0.1.1/dist/front-end.bundle.js", () => {
             const {
                 OSDatabase,
@@ -97,11 +100,10 @@ class Landing extends P.ViewController {
 
             const db = new OSDatabase()
 
-            fetch("articles.json").then(data => {
+            fetch("{{site.url}}/articles.json").then(data => {
                 return data.json()
             }).then(data => {
                 db._data = data.map(x => new OSRecord(x))
-                console.log(db._data)
                 db.configure("name")
                 this.os = new OrionSearch.OrionSearch(db)
 

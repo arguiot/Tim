@@ -57,6 +57,7 @@
 	--footer: #fafafa;
 	--white: white;
 	--opposite: #111;
+	--semi-white: #eee;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,6 +66,7 @@
 		--footer: #000;
 		--white: #1e1e1e;
 		--opposite: #fff;
+		--semi-white: #333;
 	}
 }
 
@@ -447,7 +449,7 @@ article {
 		}
 
 		blockquote {
-			background-color: #eee;
+			background-color: var(--semi-white);
 			padding: 0px 52px;
 			margin: 8px 0;
 			border-radius: 4px;
