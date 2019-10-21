@@ -1,14 +1,13 @@
 <a href="{{site.url}}" class="logo"></a>
 <div class="menu">
+	<a href="{{site.url}}" class="item">Home</a>
 	<a href="{{site.url}}/about" class="item">About</a>
-	<a href="" class="item">Page1</a>
 	<div class="item expand">Menu <div class="triangle"></div>
 	</div>
 	<ul class="expandable">
 		<div class="triangle"></div>
-		<li>Page</li>
-		<li>Page</li>
-		<li>Page</li>
-		<li>Page</li>
+		{% for page in site.menu %}
+		<li><a href="{{ page.url }}">{{ page.name }}</a></li>
+		{% endfor %}
 	</ul>
 </div>

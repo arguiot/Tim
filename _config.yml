@@ -10,3 +10,7 @@ hero-image: https://source.unsplash.com/random
 logo: https://arguiot.com/img/logo.png
 
 copyright: Arthur Guiot
+
+menu:
+  - url: https://steve.arguiot.com
+    name: Page 1

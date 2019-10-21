@@ -124,6 +124,11 @@
 			font-weight: normal;
 			font-size: 18px;
 			line-height: 25px;
+			color: var(--white);
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
 		}
 
 		.triangle {
