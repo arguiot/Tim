@@ -371,9 +371,26 @@ footer {
 	background: var(--footer);
 	font-family: "Apercu";
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	color: var(--text-color)
+	color: var(--text-color);
+	ul {
+		li {
+			opacity: 0.6;
+			font-size: 24px;
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+	}
+	.copyright {
+		text-align: right;
+		small {
+			display: block;
+			opacity: 0.6;
+		}
+	}
 }
 
 body {
