@@ -509,4 +509,40 @@ article {
 }
 
 
-@import "syntax.scss"
+@import "syntax.scss";
+
+// Media Queries
+
+@media (max-width: 740px) {
+	.logo {
+		width: 45px;
+		height: 45px;
+		left: 10px;
+		top: 25px;
+	}
+	.menu {
+		.item {
+			margin: 10px;
+			font-size: 14px;
+		}
+		.expandable {
+			width: 100px;
+			right: 20px;
+			.triangle {
+				right: 30px;
+			}
+			li {
+				font-size: 14px;
+				line-height: 15px;
+			}
+		}
+	}
+	header {
+		.title {
+			font-size: 72px;
+		}
+		.subtitle {
+			font-size: 28px;
+		}
+	}
+}
