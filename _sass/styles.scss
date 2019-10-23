@@ -416,6 +416,33 @@ body {
 
 
 /* Default styles for everything.*/
+.scroll {
+	font-size: 64px;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: 2s ease 0s scroll infinite;
+}
+@keyframes scroll {
+    0%, 100% {
+		transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%,32px);
+    }
+}
+
+@keyframes scroll-m {
+    0%, 100% {
+        bottom:192px
+    }
+
+    50% {
+        bottom:160px
+    }
+}
 
 .hero {
 	position: fixed;
