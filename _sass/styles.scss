@@ -125,6 +125,7 @@
 			font-weight: normal;
 			font-size: 18px;
 			line-height: 25px;
+
 			a {
 				color: inherit;
 				text-decoration: none;
@@ -374,21 +375,26 @@ footer {
 	justify-content: space-around;
 	align-items: center;
 	color: var(--text-color);
+
 	ul {
 		li {
 			opacity: 0.6;
 			font-size: 24px;
+
 			a {
 				color: inherit;
 				text-decoration: none;
 			}
 		}
 	}
+
 	.copyright {
 		text-align: right;
+
 		small {
 			display: block;
 			opacity: 0.6;
+
 			a {
 				color: inherit;
 			}
@@ -520,29 +526,98 @@ article {
 		left: 10px;
 		top: 25px;
 	}
+
 	.menu {
 		.item {
 			margin: 10px;
 			font-size: 14px;
 		}
+
 		.expandable {
 			width: 100px;
 			right: 20px;
+
 			.triangle {
 				right: 30px;
 			}
+
 			li {
 				font-size: 14px;
 				line-height: 15px;
 			}
 		}
 	}
+
 	header {
 		.title {
 			font-size: 72px;
 		}
+
 		.subtitle {
 			font-size: 28px;
+		}
+	}
+
+	.content {
+		.articles {
+			.search {
+				lunar-icon {
+					left: 5px;
+				}
+
+				input {
+					width: calc(100vw - 30px);
+					margin: 0;
+				}
+
+			}
+		}
+
+		.list {
+			.row {
+				justify-content: left !important;
+				&:nth-child(even) {
+					flex-direction: row;
+				}
+				.article {
+					margin: 0;
+					margin-bottom: 5px;
+					&:nth-child(even) {
+						max-width: 90vw;
+						width: 400px;
+						height: 314px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+						background: var(--text-color);
+						border: 5px solid var(--text-color);
+						margin: 0;
+						margin-bottom: 5px;
+	
+						img {
+							width: 100%;
+							height: 250px;
+							object-fit: cover;
+						}
+	
+						p {
+							height: 64px;
+							font-family: "Roboto Mono";
+							font-style: normal;
+							font-weight: normal;
+							font-size: 18px;
+							line-height: 21px;
+							color: var(--white);
+							text-transform: none;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							overflow: hidden;
+							text-align: center;
+						}
+					}
+				}
+			}
 		}
 	}
 }
