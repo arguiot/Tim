@@ -270,6 +270,7 @@ header {
 				padding: 16px 32px;
 				padding-left: 75px;
 				border: 5px solid var(--opposite);
+				border-radius: 0px;
 				background: var(--white);
 				color: var(--opposite);
 				box-sizing: border-box;
@@ -403,9 +404,14 @@ footer {
 	}
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body {
 	margin-bottom: 300px;
 	background: var(--white);
+	overflow-x: hidden;
 }
 
 
@@ -577,12 +583,15 @@ article {
 		.list {
 			.row {
 				justify-content: left !important;
+
 				&:nth-child(even) {
 					flex-direction: row;
 				}
+
 				.article {
 					margin: 0;
 					margin-bottom: 5px;
+
 					&:nth-child(even) {
 						max-width: 90vw;
 						width: 400px;
@@ -595,13 +604,13 @@ article {
 						border: 5px solid var(--text-color);
 						margin: 0;
 						margin-bottom: 5px;
-	
+
 						img {
 							width: 100%;
 							height: 250px;
 							object-fit: cover;
 						}
-	
+
 						p {
 							height: 64px;
 							font-family: "Roboto Mono";
@@ -621,6 +630,7 @@ article {
 			}
 		}
 	}
+
 	footer .copyright {
 		text-align: center;
 	}
