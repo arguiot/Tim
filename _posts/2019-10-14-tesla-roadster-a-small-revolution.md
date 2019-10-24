@@ -2,8 +2,9 @@
 title: 'Tesla Roadster: a small revolution'
 description: ''
 author: Arthur Guiot
-date: 2019-10-14 04:00:00 +0000
+date: 2019-10-14T04:00:00.000+00:00
 image: "/uploads/Roadster_Front_3_4_Canyon.jpg"
+layout: post
 
 ---
 Ad consectetur aspernatur aut veniam. Deserunt nostrum est nobis. Repudiandae debitis reprehenderit occaecati qui nisi sint quos aut. Praesentium qui enim pariatur et ipsa.

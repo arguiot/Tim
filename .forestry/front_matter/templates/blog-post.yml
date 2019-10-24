@@ -46,7 +46,7 @@ fields:
   hidden: true
   default: post
 pages:
-- _posts/test.md
-- _posts/2019-10-14-a-future-where-satellites-are-serviced-in-space-is-on-its-way.md
 - about.md
+- _posts/2019-10-14-a-future-where-satellites-are-serviced-in-space-is-on-its-way.md
 - _posts/2019-10-14-iphone-11-pro-the-default.md
+- _posts/2019-10-14-tesla-roadster-a-small-revolution.md
