@@ -4,7 +4,7 @@ description: iPhone 11 Pro
 author: Arthur Guiot
 date: 2019-10-14T04:00:00.000+00:00
 image: "/uploads/iu.jpeg"
-layout: ''
+layout: post
 
 ---
 Quia aut vel voluptas dolor velit laudantium sequi. Voluptates quis perspiciatis aut cumque ut et. Tenetur dignissimos odio officia optio.
