@@ -6,11 +6,14 @@ layout: page
 <lunar-icon class="scroll" icon="cheveron_down"></lunar-icon>
 <article>
   </div>
-    <main class="container">
-        <h1 class="title">{{page.title}}</h1>
-        <p class="date"><lunar-icon icon="clock"></lunar-icon> <time-ago class="date" datetime="{{page.date | date_to_xmlschema}}">{{page.date | date: "%B %d, %Y"}}</time-ago></p>
-        {{content}}
-    </main>
+  <main class="container">
+    <h1 class="title">{{page.title}}</h1>
+    <p class="date">
+      <lunar-icon icon="clock"></lunar-icon>
+      <time-ago class="date" datetime="{{page.date | date_to_xmlschema}}">{{page.date | date: "%B %d, %Y"}}</time-ago>
+    </p>
+    {{content}}
+  </main>
 </article>
 
 <script type="text/javascript" async
