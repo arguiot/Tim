@@ -271,7 +271,7 @@ header {
 				padding: 16px 32px;
 				padding-left: 75px;
 				border: 5px solid var(--opposite);
-				-webkit-border-radius: 0;
+				-webkit-appearance: unset;
 				border-radius: 0;
 				background: var(--white);
 				color: var(--opposite);
