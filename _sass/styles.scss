@@ -470,7 +470,18 @@ body {
 	filter: saturate(180%);
 	transform: scale(1.1);
 }
-
+h1.maintitle {
+	width: 100vw;
+	text-align: center;
+	font-family: 'New York', serif;
+	font-size: 68px;
+	font-weight: 500;
+	color: var(--white);
+	text-shadow: 0px 0px 64px var(--text-color);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
 article {
 	width: 100vw;
 	font-family: 'Lexend Deca', sans-serif;
@@ -491,14 +502,12 @@ article {
 		font-size: 18px;
 		text-align: justify;
 		min-height: 100vh;
-
-		p.date {
-			opacity: .5;
-		}
-
 		h1.title {
 			font-family: 'New York', serif;
 			font-size: 52px;
+		}
+		p.date {
+			opacity: .5;
 		}
 
 		h1,

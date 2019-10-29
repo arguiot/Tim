@@ -57,10 +57,7 @@ class Landing extends P.ViewController {
         if (this.article) {
             const f = window.scrollY / this.sup > 1 ? 1 : window.scrollY / this.sup
             this.article.style.opacity = f
-            const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1
-            if (!isFirefox) {
-                this.hero.style.filter = `saturate(180%) blur(${20 * f}px)`
-            }
+            this.view.querySelector("h1.maintitle").style.opacity = 1 - 5 * f
             if (f >= 1) {
                 this.hero.style.display = "none"
             } else {
