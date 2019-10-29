@@ -2,13 +2,13 @@ markdown: kramdown
 highlighter: rouge
 
 permalink: pretty
-url: https://steve.arguiot.com
+url: https://tim.arguiot.com
 
 github: https://github.com/arguiot
 twitter: https://twitter.com/arthur_guiot
 discord: https://discord.gg
 
-title: Steve
+title: Tim
 description: A jekyll theme for tech lovers, developers and designers
 hero-image: https://source.unsplash.com/random
 logo: https://arguiot.com/img/logo.png
