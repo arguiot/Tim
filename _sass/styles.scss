@@ -162,7 +162,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: row;
 	width: 100vw;
 	height: 100vh;
 	background: var(--text-color);
@@ -171,55 +171,68 @@ header {
 	color: #fff;
 	position: relative;
 
-	.title {
-		font-family: "Roboto Mono";
-		font-style: normal;
-		font-weight: normal;
-		font-size: 144px;
-	}
-
-	.subtitle {
-		font-family: "Apercu";
-		font-size: 48px;
-		line-height: 58px;
+	.right {
 		display: flex;
+		justify-content: center;
 		align-items: center;
-		text-align: center;
-		max-width: 650px;
+		flex-direction: column;
+		width: 50vw;
+		height: 100vh;
+
+		.title {
+			font-family: "Roboto Mono";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 144px;
+		}
+
+		.subtitle {
+			font-family: "Apercu";
+			font-size: 48px;
+			line-height: 58px;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			max-width: 650px;
+		}
 	}
 
-	.container {
-		position: absolute;
+	.left {
+		background: var(--white);
 		top: 0px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 		z-index: 5;
-	}
-
-	.rec {
-		width: 100px;
-		height: 75vw;
-		min-height: 130vh;
-		transform: rotateZ(45deg);
-	}
-
-	.rec1 {
-		background: #F24E1E;
-
-	}
-
-	.rec2 {
-		background: #A259FF;
-	}
-
-	.rec3 {
-		background: #1ABCFE;
-
-	}
-
-	.rec4 {
-		background: #0ACF83;
+		width: 50vw;
+		min-width: 400px;
+		height: 100vh;
+		img {
+			width: calc(50vw - 50px);
+			height: 300px;
+			object-fit: cover;
+		}
+		h1.article {
+			font-family: "Apercu";
+			font-size: 36px;
+			color: var(--text-color);
+			text-transform: capitalize;
+		}
+		a.readmore {
+			background: var(--text-color);
+			color: var(--white);
+			width: 200px;
+			height: 50px;
+			text-decoration: none;
+			text-align: center;
+			line-height: 50px;
+			font-family: "Apercu";
+			transition: all 100ms ease-in-out;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
 	}
 }
 
@@ -470,6 +483,7 @@ body {
 	filter: saturate(180%);
 	transform: scale(1.1);
 }
+
 h1.maintitle {
 	width: 100vw;
 	text-align: center;
@@ -482,6 +496,7 @@ h1.maintitle {
 	top: 50%;
 	transform: translateY(-50%);
 }
+
 article {
 	width: 100vw;
 	font-family: 'Lexend Deca', sans-serif;
@@ -502,10 +517,12 @@ article {
 		font-size: 18px;
 		text-align: justify;
 		min-height: 100vh;
+
 		h1.title {
 			font-family: 'New York', serif;
 			font-size: 52px;
 		}
+
 		p.date {
 			opacity: .5;
 		}
@@ -600,12 +617,17 @@ article {
 	}
 
 	header {
-		.title {
-			font-size: 72px;
+		.left {
+			display: none;
 		}
-
-		.subtitle {
-			font-size: 28px;
+		.right {
+			.title {
+				font-size: 72px;
+			}
+	
+			.subtitle {
+				font-size: 28px;
+			}
 		}
 	}
 

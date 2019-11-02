@@ -4,13 +4,16 @@ title: Tim
 description: A jekyll theme for tech lovers, developers and designers
 ---
 <header>
-	<div class="title">{{site.title}}</div>
-	<div class="subtitle">{{site.description}}</div>
-	<div class="container">
-		<div class="rec1 rec"></div>
-		<div class="rec2 rec"></div>
-		<div class="rec3 rec"></div>
-		<div class="rec4 rec"></div>
+	<div class="left">
+		{% for post in site.posts limit:1 %}
+		<img src="{{post.image}}" alt="{{post.description}}">
+		<h1 class="article">{{ post.title }}</h1>
+		<a class="readmore" href="{{post.url}}">READ MORE</a>
+		{% endfor %}
+	</div>
+	<div class="right">
+		<div class="title">{{site.title}}</div>
+		<div class="subtitle">{{site.description}}</div>
 	</div>
 </header>
 <div class="content">
@@ -18,7 +21,11 @@ description: A jekyll theme for tech lovers, developers and designers
 		<h1>Articles</h1>
 		<label class="search" for="search">
 			<lunar-icon icon="search">
-					<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" class="lunar-icons"><circle cx="15" cy="9" r="6"></circle><path d="M3 21l8-8"></path></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linejoin="round" class="lunar-icons">
+					<circle cx="15" cy="9" r="6"></circle>
+					<path d="M3 21l8-8"></path>
+				</svg>
 			</lunar-icon>
 			<input type="search" id="search" placeholder="Search...">
 	</div>
