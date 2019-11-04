@@ -210,7 +210,7 @@ header {
 		height: 100vh;
 		img {
 			width: calc(50vw - 50px);
-			height: 300px;
+			height: calc(100vh - 300px);
 			object-fit: cover;
 		}
 		h1.article {
@@ -218,6 +218,7 @@ header {
 			font-size: 36px;
 			color: var(--text-color);
 			text-transform: capitalize;
+			text-align: center;
 		}
 		a.readmore {
 			background: var(--text-color);
@@ -487,7 +488,7 @@ body {
 h1.maintitle {
 	width: 100vw;
 	text-align: center;
-	font-family: 'New York', serif;
+	font-family: 'Lexend Deca', sans-serif;
 	font-size: 68px;
 	font-weight: 500;
 	color: var(--white);
