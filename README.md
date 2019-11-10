@@ -10,6 +10,8 @@ Tim is a Jekyll theme for hackers and designers
 
 Tim is a perfect simple blog theme for people who cares about design and who wants a very simple blog. It has been designed to help readers read better with a very meticulous choice of typography. Tim is both very simple and really very pleasant to use: it is compatible with all current browsers, and fully responsive to improve the user experience.
 
+It's also compatible with the new dark mode in iOS 13/macOS. Your users will love this feature.
+
 ## Installation
 
 If you want to use this theme, it's easy: just fork this repository and change the `_config.yml`
