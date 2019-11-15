@@ -43,6 +43,11 @@ class Landing extends P.ViewController {
             expandable.style["background"] = "var(--white)"
             expandable.style["color"] = "var(--opposite)"
             expandable.querySelector(".triangle").style["border-top"] = "17.32px solid var(--opposite)"
+
+            if (this.article) {
+                this.menu.style.background = "var(--white)"
+                this.menu.style["border-bottom"] = "1px solid #333"
+            }
         } else {
             this.menu.querySelectorAll(".item").forEach(el => el.style.color = "#fff")
             this.menu.querySelector(".triangle").style["border-top"] = "17.32px solid #fff"
@@ -52,6 +57,10 @@ class Landing extends P.ViewController {
             expandable.style["background"] = "#111"
             expandable.style["color"] = "#fff"
             expandable.querySelector(".triangle").style["border-top"] = "17.32px solid #fff"
+            if (this.article) {
+                this.menu.style.background = "none"
+                this.menu.style["border-bottom"] = "none"
+            }
         }
 
         if (this.article) {

@@ -26,14 +26,15 @@
 	top: 0;
 	right: 0;
 	height: 50px;
-	// width: 100vw;
+	width: 100vw;
 	// max-width: 300px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	padding: 20px;
 	// mix-blend-mode: exclusion;
 	z-index: 100;
+
 
 	.item {
 		display: inline;
@@ -104,9 +105,9 @@
 	width: 65px;
 	height: 65px;
 	left: 30px;
-	top: 25px;
+	top: 12px;
 	background-size: contain;
-	z-index: 100;
+	z-index: 101;
 }
 
 header {
